@@ -139,6 +139,10 @@ public class IOStream: NSObject {
             streamNetworkServiceType = .background
         case .responsiveData:
             streamNetworkServiceType = .background
+        case .avStreaming:
+            return
+        case .responsiveAV:
+            return
         }
         
         input.setValue(streamNetworkServiceType.rawValue, forKey: Stream.PropertyKey.networkServiceType.rawValue)
